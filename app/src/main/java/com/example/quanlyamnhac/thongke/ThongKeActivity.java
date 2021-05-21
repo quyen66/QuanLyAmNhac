@@ -187,7 +187,7 @@ public class ThongKeActivity extends AppCompatActivity implements NavigationView
     }
 
     public void bieuDoBarChart(View view) {
-        btn_bar.setBackgroundColor(Color.RED);
+        btn_bar.setBackgroundColor(Color.CYAN);
 //        btn_line.setBackgroundColor(Color.GRAY);
         BieuDoFragment fragment = new BieuDoFragment();
         FragmentManager FragManager = getSupportFragmentManager();

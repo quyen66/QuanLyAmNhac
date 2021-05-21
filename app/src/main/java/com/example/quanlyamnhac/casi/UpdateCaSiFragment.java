@@ -40,7 +40,6 @@ public class UpdateCaSiFragment extends DialogFragment {
     Button btn_up_cs, buttonLoadPicture_up_cs;
 
     private Uri mImageUri;
-    private boolean delay = false;
 
     FirebaseStorage firebaseStorage;
     StorageReference storageReference;
@@ -85,31 +84,36 @@ public class UpdateCaSiFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
                 openFileChooser();
-                delay = true;
+                imgView_up_cs.getLayoutParams().width = 200;
             }
         });
 
         btn_up_cs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (delay) {
-                    uploadFile();
-                }
+                uploadFile();
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        database.QueryData("UPDATE CaSi SET " +
-                                " TenCaSi = '" + up_tcs.getText().toString() + "'" +
-                                ", URL = '" + url + "'" +
-                                " WHERE MaCaSi = '" + up_mcs.getText().toString() + "'");
+                        if (url.equalsIgnoreCase("NULL")) {
+                            database.QueryData("UPDATE CaSi SET " +
+                                    " TenCaSi = '" + up_tcs.getText().toString() + "'" +
+                                    ", URL = " + url +
+                                    " WHERE MaCaSi = '" + up_mcs.getText().toString() + "'");
+                        } else {
+                            database.QueryData("UPDATE CaSi SET " +
+                                    " TenCaSi = '" + up_tcs.getText().toString() + "'" +
+                                    ", URL = '" + url + "'" +
+                                    " WHERE MaCaSi = '" + up_mcs.getText().toString() + "'");
+                        }
 
                         Toast.makeText(getContext(), "Sửa thành công", Toast.LENGTH_LONG).show();
 
                         Intent casi = new Intent(getActivity().getBaseContext(), CaSiActivity.class);
                         startActivity(casi);
                     }
-                }, 3000);
+                }, 5000);
 
             }
 

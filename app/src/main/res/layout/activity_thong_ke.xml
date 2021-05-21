@@ -45,48 +45,48 @@
 
             <TextView
                 android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:background="@drawable/border_table"
+                android:layout_height="50dp"
+                android:background="@drawable/border_th_table"
                 android:padding="5dp"
                 android:text="@string/MaCaSi"
-                android:textColor="@color/black"
-                android:textSize="12dp" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:background="@drawable/border_table"
+                android:layout_width="66.5dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_th_table"
                 android:padding="5dp"
                 android:text="@string/MaBaiHat"
-                android:textColor="@color/black"
-                android:textSize="12dp" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <TextView
                 android:layout_width="110dp"
-                android:layout_height="30dp"
-                android:background="@drawable/border_table"
+                android:layout_height="50dp"
+                android:background="@drawable/border_th_table"
                 android:padding="5dp"
                 android:text="@string/TenCaSi"
-                android:textColor="@color/black"
-                android:textSize="12dp" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/border_table"
+                android:layout_height="50dp"
+                android:background="@drawable/border_th_table"
                 android:padding="5dp"
                 android:text="@string/NgayBieuDien"
-                android:textColor="@color/black"
-                android:textSize="12dp" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <TextView
-                android:layout_width="90dp"
-                android:layout_height="30dp"
-                android:background="@drawable/border_table"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_th_table"
                 android:padding="5dp"
                 android:text="@string/DiaDiem"
-                android:textColor="@color/black"
-                android:textSize="12dp" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
         </LinearLayout>
 
         <ListView

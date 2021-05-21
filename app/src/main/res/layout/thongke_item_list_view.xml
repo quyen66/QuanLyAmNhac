@@ -7,8 +7,8 @@
     <TextView
         android:id="@+id/tv_macasi_thongke"
         android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:textSize="12dp"
+        android:layout_height="50dp"
+        android:textSize="18dp"
         android:padding="5dp"
         android:textColor="@color/black"
         android:background="@drawable/border_table"/>
@@ -16,35 +16,35 @@
     <TextView
         android:id="@+id/tv_mabaihat_thongke"
         android:layout_width="66.5dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:background="@drawable/border_table"
         android:padding="5dp"
         android:textColor="@color/black"
-        android:textSize="12dp" />
+        android:textSize="18dp" />
     <TextView
         android:id="@+id/tv_tencasi_thongke"
         android:layout_width="110dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:padding="5dp"
         android:background="@drawable/border_table"
         android:textColor="@color/black"
-        android:textSize="12dp"/>
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tv_ngaybieudien_thongke"
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:background="@drawable/border_table"
         android:padding="5dp"
-        android:textSize="12dp"
+        android:textSize="18dp"
         android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tv_diadiem_thongke"
         android:layout_width="90dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:background="@drawable/border_table"
         android:padding="5dp"
-        android:textSize="12dp"
+        android:textSize="18dp"
         android:textColor="@color/black"/>
 </LinearLayout>
