@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/gradient_bg"
+    android:clickable="true"
+    android:longClickable="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/bh_mabaihat"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/bh_tenbaihat"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/bh_namsangtac"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12dp" />
+
+    <android.widget.Button
+        android:id="@+id/btn_baihat_next"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:clickable="true"
+        android:drawableEnd="@drawable/righticons"
+        android:text="@string/ThemThongTin"
+        android:textSize="10dp" />
+
+</LinearLayout>

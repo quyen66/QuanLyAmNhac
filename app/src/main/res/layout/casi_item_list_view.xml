@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/gradient_bg"
+    android:clickable="true"
+    android:longClickable="true"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/cs_url"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/cs_macasi"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/cs_tencasi"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12dp"/>
+
+    <android.widget.Button
+        android:id="@+id/btn_casi_next"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/border_table"
+        android:clickable="true"
+        android:drawableEnd="@drawable/righticons"
+        android:text="@string/ThemThongTin"
+        android:textSize="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">QuanLyAmNhac</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="DanhMucBaiHat">Danh mục bài hát</string>
+    <string name="DanhMucBieuDien">Danh mục ca sĩ biểu diễn</string>
+    <string name="DanhMucNhacSi">Danh mục nhạc sĩ</string>
+    <string name="ThongKe">Thống kê</string>
+    <string name="InbaoCao">In báo cáo</string>
+    <string name="ThemThongTin">Thêm thông tin</string>
+    <string name="Xoa">Xóa</string>
+    <string name="Sua">Sửa</string>
+    <string name="Them">Thêm</string>
+    <string name="QuayLai">Quay lại</string>
+    <string name="Co">Có</string>
+    <string name="Khong">Không</string>
+    <string name="Luu">Lưu</string>
+    <string name="MaBaiHat">Mã bài hát</string>
+    <string name="MaCaSi">Mã ca sĩ</string>
+    <string name="TenCaSi">Tên ca sĩ</string>
+    <string name="TenNhacSi">Tên nhạc sĩ</string>
+    <string name="NgayBieuDien">Ngày biểu diễn</string>
+    <string name="DiaDiem">Địa điểm</string>
+    <string name="TenBaiHat">Tên bài hát</string>
+    <string name="NamSangtac">Năm sáng tác</string>
+    <string name="ThemNhacSi">Thêm nhạc sĩ</string>
+    <string name="ChinhSuaNhacSi">Chỉnh sửa thông tin nhạc sĩ</string>
+    <string name="ThemBaiHat">Thêm bài hát</string>
+    <string name="ThemCaSi">Thêm ca sĩ</string>
+    <string name="ChinhSuaBaiHat">Chỉnh sửa thông tin bài hát</string>
+    <string name="ChinhSuaBieuDien">Chỉnh sửa thông tin biểu diễn</string>
+    <string name="ChinhSuaCaSi">Chỉnh sửa thông tin ca sĩ</string>
+    <string name="XoaNhacSi">Bạn có chắc chắn muốn xóa?</string>
+    <string name="ThaoTac">Vui lòng chọn thao tác</string>
+    <string name="MaNhacSi">Mã nhạc sĩ</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:gravity="center"
+    android:clickable="true"
+    android:longClickable="true"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_macasi"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:textSize="12dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="@drawable/border_table"/>
+
+    <TextView
+        android:id="@+id/tv_tencasi"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:background="@drawable/border_table"
+        android:textColor="@color/black"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_ngaybieudien"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textSize="12dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_diadiem"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_table"
+        android:padding="5dp"
+        android:textSize="12dp"
+        android:textColor="@color/black"/>
+</LinearLayout>

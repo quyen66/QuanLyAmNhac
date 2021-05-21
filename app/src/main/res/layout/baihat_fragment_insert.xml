@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/ThemBaiHat"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/add_mns"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_radius"
+        android:text=""
+        android:paddingLeft="20dp" />
+
+    <EditText
+        android:id="@+id/add_mbh"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_radius"
+        android:hint="@string/MaBaiHat"
+        android:paddingLeft="20dp" />
+
+    <EditText
+        android:id="@+id/add_tbh"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_radius"
+        android:hint="@string/TenBaiHat"
+        android:paddingLeft="20dp" />
+
+    <EditText
+        android:id="@+id/add_nst"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_radius"
+        android:hint="@string/NamSangtac"
+        android:paddingLeft="20dp" />
+
+
+    <android.widget.Button
+        android:id="@+id/btn_add_bh"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_radius"
+        android:text="@string/Them" />
+</LinearLayout>
