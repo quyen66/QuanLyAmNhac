@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,15 @@ public class BieuDoFragment extends Fragment {
 
     Database database;
     BarChart barChart;
-    public static BieuDoFragment newInstance() {
-        return new BieuDoFragment();
+
+    ArrayList<String> labels = new ArrayList<String>();
+    ;
+    ArrayList<Integer> count = new ArrayList<Integer>();
+    ;
+
+    public BieuDoFragment(ArrayList<String> list_mcs, ArrayList<Integer> list_labels) {
+        labels.addAll(list_mcs);
+        count.addAll(list_labels);
     }
 
     @Override
@@ -42,17 +50,17 @@ public class BieuDoFragment extends Fragment {
 
         database = new Database(getContext(), "QuanLyAmNhac.sqlite", null, 1);
 
-        View root =inflater.inflate(R.layout.bieudo_fragment, container, false);;
+        View root = inflater.inflate(R.layout.bieudo_fragment, container, false);
+        ;
         barChart = root.findViewById(R.id.barChart);
-        Cursor data = database.GetData("select c.MaCaSi, count(b.MaCaSi) from CaSi c, BieuDien b where c.MaCaSi = b.MaCaSi group by c.MaCaSi");
+        //Cursor data = database.GetData("select c.MaCaSi, count(b.MaCaSi) from CaSi c, BieuDien b where c.MaCaSi = b.MaCaSi group by c.MaCaSi");
         ArrayList<BarEntry> bar = new ArrayList<>();
-        ArrayList<String> labels = new ArrayList<String>();
-        int i = 0;
-        while (data.moveToNext()){
-            bar.add(new BarEntry(i, data.getInt(1)));
-            labels.add(data.getString(0));
-            i++;
+
+        for (int i = 0; i < labels.size(); i++) {
+            bar.add(new BarEntry(i, count.get(i)));
+            Log.d("vi tri " + i, " = "+count.get(i));
         }
+
         BarDataSet barDataSet = new BarDataSet(bar, "Số lần ca sĩ biểu diễn bài hát");
         barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
         barDataSet.setValueTextColor(Color.BLACK);

@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -41,6 +42,9 @@ public class ThongKeActivity extends AppCompatActivity implements NavigationView
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
+
+    ArrayList<String> list_mcs;
+    ArrayList<Integer> list_labels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,10 +171,13 @@ public class ThongKeActivity extends AppCompatActivity implements NavigationView
 
     public void ThongKe(String month) {
         ArrayList<BieuDienDatabase> bieuDienArrayList = new ArrayList<>();
+        list_labels = new ArrayList<>();
+        list_mcs = new ArrayList<>();
         Cursor data = database.GetData("select * from BieuDien");
         while (data.moveToNext()) {
             String d = data.getString(4);
             String[] date = d.split("/");
+            boolean selected = false;
             int namChon = Integer.parseInt(sp_nam.getSelectedItem().toString());
             if (date[1].equals(month) && namChon == Integer.parseInt(date[2])) {
                 BieuDienDatabase bieuDienDatabase = new BieuDienDatabase();
@@ -180,8 +187,29 @@ public class ThongKeActivity extends AppCompatActivity implements NavigationView
                 bieuDienDatabase.setDiaDiem(data.getString(5));
                 bieuDienDatabase.setNgayBieuDien(data.getString(4));
                 bieuDienArrayList.add(bieuDienDatabase);
+
+                Log.d("ma ca si db ", data.getString(2));
+
+                for (int i = 0; i < list_mcs.size(); i++) {
+                    if (list_mcs.get(i).equals(data.getString(2))) {
+                        list_labels.add(i, list_labels.get(i) + 1);
+                        Log.d("ma ca si " + list_mcs.get(i), " = add " + list_labels.get(i));
+                        selected = true;
+                        break;
+                    }
+                }
+
+                if (selected == false) {
+                    list_mcs.add(data.getString(2));
+                    list_labels.add(1);
+                    Log.d("add ma ca si " + list_mcs.get(list_mcs.size() - 1), " = " + list_labels.get(list_mcs.size() - 1));
+                }
+
+                Log.d("db ma ca si ", "end round");
+
             }
         }
+
         CustomAdapterThongKe adapterThang = new CustomAdapterThongKe(getApplication(), R.layout.thongke_item_list_view, bieuDienArrayList);
         lv_thongke.setAdapter(adapterThang);
     }
@@ -189,7 +217,7 @@ public class ThongKeActivity extends AppCompatActivity implements NavigationView
     public void bieuDoBarChart(View view) {
         btn_bar.setBackgroundColor(Color.CYAN);
 //        btn_line.setBackgroundColor(Color.GRAY);
-        BieuDoFragment fragment = new BieuDoFragment();
+        BieuDoFragment fragment = new BieuDoFragment(list_mcs, list_labels);
         FragmentManager FragManager = getSupportFragmentManager();
         FragmentTransaction FragTrans = FragManager.beginTransaction();
         FragTrans.replace(R.id.bieudo_fragment, fragment);
